@@ -280,13 +280,6 @@ public class LatinSquare {
 	 */
 	public boolean ContainsZero() {
 		//TODO: Return 'true' if any element in the puzzle contains a zero
-		for (int i = 0; i < LatinSquare.length; i++) {
-			for (int j = 0; j < LatinSquare.length; j++) {
-				if (LatinSquare[i][j] == 0) {
-					return true;
-				}
-			}
-		}
 		return false;
 
 	}
@@ -301,6 +294,20 @@ public class LatinSquare {
 	protected ArrayList<PuzzleViolation> getPV() {
 		return PV;
 	}
+	
+	/**
+	 * getPV - Get all puzzle violations by type
+	 * 
+	 * @version 1.0
+	 * @since Midterm #1
+	 * @param ePV - given puzzle violation type
+	 */	
+	protected ArrayList<PuzzleViolation> getPV(ePuzzleViolation ePV)
+	{
+		//FIXME: Return a list of the puzzle violations by type, null if none. 
+		return null;
+	}
+	
 
 	/**
 	 * ClearPuzzleViolation - clear the collection of PuzzleViolations
@@ -322,4 +329,6 @@ public class LatinSquare {
 	protected void AddPuzzleViolation(PuzzleViolation pv) {
 		PV.add(pv);
 	}
+	
+
 }

@@ -30,7 +30,7 @@ public class LatinSquareTest {
 
 		boolean bHasDuplicates = LS.hasDuplicates(arr);
 
-		assertEquals(bHasDuplicates, true);
+		assertEquals(true, bHasDuplicates);
 
 	}
 
@@ -111,7 +111,7 @@ public class LatinSquareTest {
 
 		LatinSquare LS = new LatinSquare(MySquare);
 		
-		assertTrue(LS.isLatinSquare());
+		assertFalse(LS.isLatinSquare());
 	}
 	
 	@Test
@@ -122,6 +122,16 @@ public class LatinSquareTest {
 		LatinSquare LS = new LatinSquare(MySquare);
 		
 		assertFalse(LS.isLatinSquare());
+	}
+
+	@Test
+	public void isLatinSquare_Test3() {
+		
+		int[][] MySquare = { { 1, 2, 3 }, { 3, 1, 2 }, { 4, 5, 6 } };
+
+		LatinSquare LS = new LatinSquare(MySquare);
+		
+		assertFalse(LatinSquare.isLatinSquare(MySquare));
 	}
 
 }
